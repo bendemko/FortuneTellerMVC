@@ -140,7 +140,7 @@ namespace Fortune_teller_mvc.Controllers
             {
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = customer.CustomerID });
             }
 
             return View(customer);
